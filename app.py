@@ -5,7 +5,7 @@ CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRmzKG-WtuZQ79ajXoWg0
 
 app = Flask(__name__)
 
-@app.route("https://ad-customes.onrender.com/webhook", methods=["POST"])
+@app.route("/webhook", methods=["POST"])
 def webhook():
     try:
         df = pd.read_csv(CSV_URL)
